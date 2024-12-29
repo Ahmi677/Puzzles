@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Finding Puzzle</title>
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f0f0f0; margin: 0; padding: 20px;">
+    <div class="container" style="max-width: 600px; margin: 0 auto; text-align: center; background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+        <h1 style="color: #333;">Word Finding Puzzle</h1>
+        <p>Find the hidden word in the puzzle!</p>
+        <div id="puzzleGrid" style="display: grid; grid-template-columns: repeat(5, 40px); grid-gap: 5px; margin: 20px 0;"></div>
+        <input type="text" id="userInput" placeholder="Enter your word" style="padding: 10px; font-size: 16px; border-radius: 5px; border: 1px solid #ddd;">
+        <button onclick="checkAnswer()" style="padding: 10px 15px; font-size: 16px; margin-top: 10px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer;">Check</button>
+        <p id="message" style="margin-top: 20px; font-size: 18px;"></p>
+    </div>
+
+    <script>
+        // The hidden word in the puzzle
+        const hiddenWord = "CLUECRAFT";
+
+        // Function to create a random letter grid
+        function createPuzzleGrid() {
+            const puzzleGridElement = document.getElementById("puzzleGrid");
+            const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            let grid = [];
+            
+            // Create a 5x5 grid with random letters and the hidden word
+            for (let i = 0; i < 25; i++) {
+                grid.push(letters[Math.floor(Math.random() * letters.length)]);
+            }
+
+            // Place the hidden word randomly in the grid
+            let startPos = Math.floor(Math.random() * 21); // Random position for word
+            for (let i = 0; i < hiddenWord.length; i++) {
+                grid[startPos + i] = hiddenWord[i];
+            }
+
+            // Populate the grid in the DOM
+            let gridHTML = '';
+            grid.forEach(letter => {
+                gridHTML += `<div style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; background-color: #e2e2e2; font-size: 18px; border-radius: 5px;">${letter}</div>`;
+            });
+            puzzleGridElement.innerHTML = gridHTML;
+        }
+
+        // Function to check if the user guessed the hidden word correctly
+        function checkAnswer() {
+            const userInput = document.getElementById("userInput").value.toUpperCase();
+            const messageElement = document.getElementById("message");
+
+            if (userInput === hiddenWord) {
+                messageElement.textContent = "Congratulations! You found the word!";
+                messageElement.style.color = "green";
+            } else {
+                messageElement.textContent = "Oops! Try again!";
+                messageElement.style.color = "red";
+            }
+        }
+
+        // Initialize the game
+        createPuzzleGrid();
+    </script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+Skip to main content
+Google Classroom
+Classroom
+Application of Information and Communication Technologies Lab
+BSCS-l-B
+Assignment details
+HTML,CSS
+Qaisar Manzoor
+•
+Dec 4 (Edited Dec 4)
+20 points
+Question 1:
+You are tasked with designing the front-end for a blog website. The client wants a responsive navigation bar that includes the following features:Links to "Home," "About Us," "Blog," and "Contact Us."The navigation bar should stick to the top of the page when scrolling.On smaller screens (mobile devices), the links should collapse into a hamburger menu.
+Write the to create the navigation bar structure.Write the to:
+Make the navigation bar sticky at the top of the page.
+Add a media query to ensure the links collapse into a hamburger menu on screens smaller than 600px.
+Question 2: 
+You are designing a login page for an e-commerce website. The form should include:Two input fields: one for "Email" and another for "Password."A "Login" button styled to have rounded corners, a gradient background, and hover effects.The form should be centered both vertically and horizontally on the page.
+Write the to create the login form structure.Write the to:
+Style the input fields and the button as described.
+Center the form on the page using flexbox or grid layout.
+Class comments
+Your work
+Turned in
+
+index.html
+HTML
+
+style.css
+Style Sheet
+Your teacher is not accepting work at this time
+Private comments
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    animation: gradientShift 10s infinite;
+  }
+  
+  @keyframes gradientShift {
+    0% { background: linear-gradient(135deg, #6a11cb, #2575fc); }
+    50% { background: linear-gradient(135deg, #2575fc, #ff6a00); }
+    100% { background: linear-gradient(135deg, #ff6a00, #6a11cb); }
+  }
+  
+
+  .container {
+    width: 400px;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+  }
+  
+  
+  .title-section {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .title-section h1 {
+    font-size: 2rem;
+    color: #fff;
+  }
+  
+  .title-section p {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+ 
+  .input-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .input-group label {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    margin-top: 0.5rem;
+    outline: none;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .input-group input:focus {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+  }
+  
+
+  button {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(90deg, #ff6a00, #ee0979);
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(255, 105, 135, 0.3);
+  }
+  
+
+ 
+  
+style.css
+Displaying style.css.

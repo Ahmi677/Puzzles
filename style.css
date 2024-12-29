@@ -1,0 +1,339 @@
+
+.navbar body{
+  display: block;
+  justify-content: space-between;
+  height: 10rem;
+  padding: 10px 20px;
+ 
+}
+
+
+
+.navbar ul li
+ a {
+  text-decoration: none;
+  color: rgb(250, 242, 248); 
+  font-weight: bold;
+  transition: color 0.3s;
+  margin: 0 15px;
+}
+
+.navbar ul li a:hover {
+  color: #19fa6f;
+}
+
+.navbar button:hover {
+  background-color: #19fa6f;
+  color: #620df5;
+}
+
+
+  
+
+
+
+/* Section Styling */
+.cards-section {
+  position: relative;
+  background-image: url('new3.png'); 
+  background-size: cover;
+  background-position: center;
+  padding: 20px 10px; 
+  color: #fff;
+  text-align: center;
+  min-height: 100px; /* Adjust the height of the section */
+}
+
+
+.cards-overlay {
+  background: rgba(0, 0, 0, 0.5); 
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Section Title Styling */
+.section-title {
+  font-size: 2em; /* Slightly smaller title */
+  margin-bottom: 20px;
+}
+
+/* Card Container Styling */
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 80px; /* Increased spacing between cards */
+  flex-wrap: wrap; /* Ensures responsiveness */
+}
+
+/* Card Styling */
+.card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 30px; /* More circular/oval-like shape */
+  padding: 15px;
+  width: 240px; /* Reduced card width for more oval shape */
+  height: 320px; /* Reduced height for better oval proportion */
+  text-align: center;
+  color: #333;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Image Styling */
+.card-img {
+  width: 100%;
+  height: 130px; /* Adjusted image height */
+  object-fit: cover;
+  border-radius: 30px 30px 0 0; /* Rounded top corners to match oval shape */
+}
+
+.card h3 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 1.3em;
+}
+
+.card p {
+  margin-bottom: 15px;
+  font-size: 0.9em;
+}
+
+/* Button Styling */
+.card-btn {
+  padding: 8px 18px;
+  background: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 20px; /* Slightly rounded buttons */
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.card-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+
+
+
+
+
+
+
+
+
+
+  .creative-footer {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    padding: 20px 10px; /* Further reduced padding */
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: start;
+    max-width: 75rem;
+    margin: auto;
+    gap: 10px; /* Further reduced gap */
+  }
+  
+  .footer-brand {
+    flex: 1;
+    min-width: 8rem; /* Further reduced minimum width */
+  }
+  
+  .brand-logo {
+    width: 100px; /* Further reduced logo size */
+    margin-bottom: 8px; /* Further reduced margin */
+  }
+  
+  .footer-brand p {
+    font-size: 12px; /* Slightly smaller font size */
+    color: #ddd;
+  }
+  
+  .footer-links {
+    flex: 1;
+    min-width: 120px; /* Further reduced minimum width */
+  }
+  
+  .footer-links h4 {
+    font-size: 14px; /* Further reduced font size */
+    margin-bottom: 8px; /* Further reduced margin */
+    color: #f1c40f;
+  }
+  
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-links ul li {
+    margin-bottom: 6px; /* Further reduced margin */
+    font-size: 12px; /* Slightly smaller font size */
+  }
+  
+  .footer-links ul li a {
+    color: #ddd;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+  
+  .footer-links ul li a i {
+    margin-right: 4px; /* Further reduced margin */
+    color: #f1c40f;
+  }
+  
+  .footer-links ul li a:hover {
+    color: #f1c40f;
+  }
+  
+  /* Newsletter Section */
+  .footer-newsletter {
+    flex: 1;
+    min-width: 150px; /* Further reduced minimum width */
+  }
+  
+  .footer-newsletter h4 {
+    font-size: 14px; /* Further reduced font size */
+    margin-bottom: 8px; /* Further reduced margin */
+    color: #f1c40f;
+  }
+  
+  .footer-newsletter p {
+    font-size: 12px; /* Slightly smaller font size */
+    color: #ddd;
+  }
+  
+  .newsletter-form {
+    display: flex;
+    gap: 6px; /* Further reduced gap */
+    margin-top: 6px; /* Further reduced margin */
+  }
+  
+  .newsletter-form input {
+    flex: 1;
+    padding: 6px; /* Further reduced padding */
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .newsletter-form .subscribe-btn {
+    padding: 6px 10px; /* Further reduced padding */
+    border: none;
+    background: #f1c40f;
+    color: #111;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .newsletter-form .subscribe-btn:hover {
+    background: #ffab00;
+  }
+  
+  /* Social Media */
+  .footer-social {
+    flex: 1;
+    min-width: 120px; /* Further reduced minimum width */
+  }
+  
+  .footer-social h4 {
+    font-size: 14px; /* Further reduced font size */
+    margin-bottom: 8px; /* Further reduced margin */
+    color: #f1c40f;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Reduced gap */
+  }
+  
+  .social-icons a {
+    width: 35px; /* Reduced size */
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s;
+  }
+  
+  .social-icons a:hover {
+    background-color: #f1c40f;
+    color: #111;
+  }
+  
+  /* Footer Bottom */
+  .footer-bottom {
+    margin-top: 20px; /* Reduced margin */
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 15px; /* Reduced padding */
+  }
+  
+  .footer-bottom p {
+    font-size: 13px; /* Slightly smaller font size */
+    color: #ddd;
+  }
+  
+  .footer-bottom p a {
+    color: #f1c40f;
+    text-decoration: none;
+  }
+  
+  .footer-bottom p a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer-links, .footer-newsletter, .footer-social {
+      text-align: center;
+    }
+  
+    .newsletter-form {
+      flex-direction: column;
+      gap: 10px; /* Adjusted gap */
+    }
+  
+    .newsletter-form input, .newsletter-form .subscribe-btn {
+      width: 100%; /* Full width inputs and button */
+    }
+  
+    .social-icons {
+      gap: 8px; /* Reduced gap */
+    }
+    
+  }
+  .logo-container {
+    width: 50px; /* Adjust to the desired width */
+    height: 50px; /* Adjust to the desired height */
+    overflow: hidden; /* Hide the rest of the image */
+    border-radius: 50%; /* Optional: Make it circular */
+    display: inline-block;
+  }
+
+  .logo-img {
+    width: 100%; /* Ensure the image fills the container */
+    height: 100%; /* Ensure the image fills the container */
+    object-fit: cover; /* Focus on the logo part */
+  }

@@ -1,0 +1,125 @@
+/* General body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Container styling for the page */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+  }
+  
+  /* Title styling */
+  h1 {
+    font-size: 3rem;
+    color: #343a40;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+  }
+  
+  /* Card styling */
+  .card {
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 30px;
+  }
+  
+  .card-img {
+    object-fit: cover;
+  }
+  
+  .card-img-overlay {
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent overlay */
+    padding: 20px;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .card-title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  
+  .card-text {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .button-container {
+    text-align: center;
+  }
+  
+  .button-container .btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button-container .btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive styling for mobile screens */
+  @media (max-width: 768px) {
+    .card {
+      margin-bottom: 20px;
+    }
+  
+    .card-title {
+      font-size: 1.5rem;
+    }
+  
+    .card-text {
+      font-size: 1rem;
+    }
+  
+    .button-container .btn {
+      font-size: 1rem;
+      padding: 8px 16px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .container {
+      padding: 15px;
+    }
+  
+    h1 {
+      font-size: 2.5rem;
+    }
+  
+    .card {
+      margin-bottom: 15px;
+    }
+  
+    .card-img {
+      height: 300px;
+    }
+  
+    .button-container .btn {
+      font-size: 0.9rem;
+      padding: 6px 14px;
+    }
+  }
+  

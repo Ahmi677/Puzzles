@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Number Game</title>
+</head>
+<body>
+    <h1>Guess the Number Game</h1>
+    <p>Try to guess the number between 1 and 100.</p>
+    <button onclick="startGame()">Start Game</button>
+
+    <script>
+        let numberToGuess = Math.floor(Math.random() * 100) + 1;
+        let attempts = 0;
+
+        // Function to start the game
+        function startGame() {
+            console.log("Welcome to the 'Guess the Number' game!");
+            console.log("Try to guess the number between 1 and 100.");
+            askForGuess();
+        }
+
+        // Function to prompt the user for guesses
+        function askForGuess() {
+            let guess = prompt("Enter your guess:");
+
+            // Check if the input is a number
+            if (guess === null) {
+                alert("Game canceled!");
+                return; // Exit the game if the user cancels
+            }
+
+            guess = parseInt(guess);  // Convert input to a number
+            attempts++;
+
+            // Check if the guess is a valid number
+            if (isNaN(guess)) {
+                alert("Please enter a valid number.");
+                askForGuess(); // Retry if input is invalid
+            } else if (guess < numberToGuess) {
+                alert("Too low! Try again.");
+                askForGuess();
+            } else if (guess > numberToGuess) {
+                alert("Too high! Try again.");
+                askForGuess();
+            } else {
+                alert(`Correct! You guessed the number in ${attempts} attempts.`);
+            }
+        }
+    </script>
+</body>
+</html>
